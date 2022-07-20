@@ -9,8 +9,8 @@ PLOT_PARAMETER = {
     'del_pilot_sub': True,  # Delete pilot subcarriers
 
     'time': [
-            '2022-06-08 17:50:00',  # Start
-            '2022-06-08 17:51:00'   # End
+            '2022-05-02 16:53:00',  # Start
+            '2022-05-02 16:54:00'   # End
     ],
 
     'sampling': False,

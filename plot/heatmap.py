@@ -109,18 +109,18 @@ def timeHeatmap(csi_df, time_list, time_ms_list):
     for col in csi_df.columns:
         y_list.append(col)
 
-    plt.title('Amp-Time Heatmap', fontsize=20)
+    plt.title('Walking', fontsize=44)
     plt.pcolor(x_list, y_list, csi_df.transpose(), cmap='jet')
     cbar = plt.colorbar()
-    cbar.set_label('Amplitude (dBm)')
+    cbar.set_label('Amplitude (dBm)', fontsize=40)
 
-    ytic = np.arange(0, len(df.columns), 13)
+    ytic = np.arange(0, len(csi_df.columns), 13)
 
-    plt.xticks(new_idx_list, xtic_list, rotation=45)
-    plt.yticks(ytic, [y_list[idx] for idx in [0, int(len(y_list)/4), int(len(y_list)/4*2), int(len(y_list)/4*3)]])
+    plt.xticks(new_idx_list, [0, 60], fontsize=30)
+    plt.yticks(ytic, [y_list[idx] for idx in [0, int(len(y_list)/4), int(len(y_list)/4*2), int(len(y_list)/4*3)]], fontsize=30)
     #plt.xlabel('Time (s)')
-    plt.xlabel('Time',  fontsize=16)
-    plt.ylabel('Subcarrier Index',  fontsize=16)
+    plt.xlabel('Time(s)',  fontsize=40)
+    plt.ylabel('Subcarrier Index',  fontsize=40)
 
     plt.show()
 
